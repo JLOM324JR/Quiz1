@@ -8,33 +8,51 @@
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
     <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <title>Document</title>
 </head>
 
 <body>
     <ons-page>
         <ons-toolbar>
-            <div class="center">Tab 1</div>
+                
+                        <div class="left">
+                          <ons-toolbar-button ><i class="zmdi zmdi-shopping-basket"></i></ons-toolbar-button>
+                        </div>
+                    
+                        <div class="center">Home</div>
+                    
+                        <div class="right">
+                        <ons-toolbar-button ><i class="zmdi zmdi-help-outline"></i></ons-toolbar-button>
+                        </div>
+                      
+         
         </ons-toolbar>
 
         <ons-tabbar swipeable position="auto">
             <ons-tab page="tab1.html" label="Tab 1" icon="ion-home, material:md-home" badge="7" active>
             </ons-tab>
-            <ons-tab page="tab2.html" label="Tab 2" icon="md-settings" active-icon="md-face">
+            <ons-tab page="tab2.html" label="Cart" icon="fa-shopping-bag" active-icon="md-face">
             </ons-tab>
         </ons-tabbar>
     </ons-page>
 
     <template id="tab1.html">
-        <ons-page id="Tab1">
-            <p style="text-align: center;">
-                This is the first page.
-            </p>
-        </ons-page>
+            <ons-page id="Tab1">
+                <ons-row vertical-align>
+                    <ons-col>Text</ons-col>
+                </ons-row>
+                <ons-row>
+                    <ons-col>Text</ons-col>
+                </ons-row>
+                <ons-row>
+                    <ons-col>Text</ons-col>
+                </ons-row>
+            </ons-page>
     </template>
 
     <template id="tab2.html">
-        <ons-page id="Tab2">
+        <ons-page id="Cart">
             <p style="text-align: center;">
                 This is the second page.
             </p>
@@ -47,6 +65,7 @@
         document.querySelector('ons-toolbar .center')
         .innerHTML = event.tabItem.getAttribute('label');
     });
+    document.querySelector('ons-row').setAttribute('someAttribute', 'true')
 </script>
 
 </html>
