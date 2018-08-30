@@ -44,81 +44,111 @@
 
     <template id="tab1.html">
         <ons-page>
-            <p style="text-align: center; margin-top: 10px;">
-                <ons-search-input placeholder="Search" onchange="ons.notification.alert('Searched for: ' + this.value)"></ons-search-input>
-            </p>
-            <ons-carousel swipeable auto-scroll overscrollable id="carousel" style="height:300px;">
-                <ons-carousel-item style="background : url('image/1.jpg') no-repeat center; background-size: contain;">
-                </ons-carousel-item>
+            <section style="padding: 10px">
+                <p style="text-align: center; margin-top: 10px;">
+                    <ons-search-input placeholder="Search" onchange="ons.notification.alert('Searched for: ' + this.value)"></ons-search-input>
+                </p>
+            </section>
+            <section style="padding: 10px">
+                <ons-carousel swipeable auto-scroll overscrollable id="carousel" style="height:300px;">
+                    <ons-carousel-item style="background : url('image/1.jpg') no-repeat center; background-size: contain;">
+                    </ons-carousel-item>
 
-                <ons-carousel-item style="background : url('image/2.jpg') no-repeat center; background-size: contain;">
-                </ons-carousel-item>
+                    <ons-carousel-item style="background : url('image/2.jpg') no-repeat center; background-size: contain;">
+                    </ons-carousel-item>
 
-                <ons-carousel-item style="background : url('image/3.jpg') no-repeat center; background-size: contain;">
-                </ons-carousel-item>
-            </ons-carousel>
-            <div>
-                <ons-row style="height:120px" vatical-align="center">
-                    <ons-col style="background:#FFFAF0;">
-                        <p style="text-align: center;margin: 10px;">
-                            <ons-icon size="60px" icon="md-toys"></ons-icon>
-                        </p>
-                        <p style="text-align: center;margin: 10px;"></p>
-                    </ons-col>
-                    <ons-col style="background:#FFCCFF;">
-                        <p style="text-align: center;margin: 10px;">
-                            <ons-icon size="60px" icon="md-face"></ons-icon>
-                        </p>
-                        <p style="text-align: center;margin: 10px;"></p>
-                    </ons-col>
-                    <ons-col style="background:#BBFFFF;">
-                        <p style="text-align: center;margin: 10px;">
-                            <ons-icon size="60px" icon="md-wifi"></ons-icon>
-                        </p>
-                        <p style="text-align: center;margin: 10px;"></p>
-                    </ons-col>
-                </ons-row>
-                <ons-row style="height:120px" vatical-align="center">
-                    <ons-col style="background:#FFEFD5;">
-                        <p style="text-align: center;margin: 10px;">
-                            <ons-icon size="60px" icon="md-help"></ons-icon>
-                        </p>
-                        <p style="text-align: center;margin: 10px;"></p>
-                    </ons-col>
-                    <ons-col style="background:#FF99FF;">
-                        <p style="text-align: center;margin: 10px;">
-                            <ons-icon size="60px" icon="md-adb"></ons-icon>
-                        </p>
-                        <p style="text-align: center;margin: 10px;"></p>
-                    </ons-col>
-                    <ons-col style="background:#98F5FF;">
-                        <p style="text-align: center;margin: 10px;">
-                            <ons-icon size="60px" icon="md-cake"></ons-icon>
-                        </p>
-                        <p style="text-align: center;margin: 10px;"></p>
-                    </ons-col>
-                </ons-row>
-                <ons-row style="height:120px" vatical-align="center">
-                    <ons-col style="background:#FFDEAD;">
-                        <p style="text-align: center;margin: 10px;">
-                            <ons-icon size="60px" icon="md-home"></ons-icon>
-                        </p>
-                        <p style="text-align: center;margin: 10px;"></p>
-                    </ons-col>
-                    <ons-col style="background:#FF66FF;">
-                        <p style="text-align: center;margin: 10px;">
-                            <ons-icon size="60px" icon="fa-cog"></ons-icon>
-                        </p>
-                        <p style="text-align: center;margin: 10px;"></p>
-                    </ons-col>
-                    <ons-col style="background:#00BFFF;">
-                        <p style="text-align: center;margin: 10px;">
-                            <ons-icon size="60px" icon="fa-car"></ons-icon>
-                        </p>
-                        <p style="text-align: center;margin: 10px;"></p>
-                    </ons-col>
-                </ons-row>
-            </div>
+                    <ons-carousel-item style="background : url('image/3.jpg') no-repeat center; background-size: contain;">
+                    </ons-carousel-item>
+                </ons-carousel>
+            </section>
+            <section style="padding: 10px">
+                <div>
+                    <section style="padding: 10px">
+                    <ons-row style="height:120px" vatical-align="center">
+                        <ons-col style="background:#FFFAF0;">
+                            <p style="text-align: center;margin: 10px;">
+                                <ons-icon size="60px">
+                                        <i class="zmdi zmdi-facebook-box"></i>
+                                </ons-icon>
+                            </p>
+                            <p style="text-align: center;margin: 10px;">Facebook</p>
+                        </ons-col>
+                        <ons-col style="background:#FFCCFF;">
+                            <p style="text-align: center;margin: 10px;">
+                                <ons-icon size="60px" >
+                                    <i class="zmdi zmdi-github"></i>
+                                </ons-icon>
+                            </p>
+                            <p style="text-align: center;margin: 10px;">Github</p>
+                        </ons-col>
+                        <ons-col style="background:#BBFFFF;">
+                            <p style="text-align: center;margin: 10px;">
+                                <ons-icon size="60px" >
+                                    <i class="zmdi zmdi-twitter"></i>
+                                </ons-icon>
+                            </p>
+                            <p style="text-align: center;margin: 10px;">Twitter</p>
+                        </ons-col>
+                    </ons-row>
+                </section>
+                <section style="padding: 10px">
+                    <ons-row style="height:120px" vatical-align="center">
+                        <ons-col style="background:#FFEFD5;">
+                            <p style="text-align: center;margin: 10px;">
+                                <ons-icon size="60px">
+                                        <i class="zmdi zmdi-account-circle"></i>
+                                </ons-icon>
+                            </p>
+                            <p style="text-align: center;margin: 10px;">Account List</p>
+                        </ons-col>
+                        <ons-col style="background:#FF99FF;">
+                            <p style="text-align: center;margin: 10px;">
+                                <ons-icon size="60px">
+                                        <i class="zmdi zmdi-download"></i>
+                                </ons-icon>
+                            </p>
+                            <p style="text-align: center;margin: 10px;">Download</p>
+                        </ons-col>
+                        <ons-col style="background:#98F5FF;">
+                            <p style="text-align: center;margin: 10px;">
+                                <ons-icon size="60px">
+                                    <i class="zmdi zmdi-bluetooth"></i>
+                                </ons-icon>
+                            </p>
+                            <p style="text-align: center;margin: 10px;">Bluetooth</p>
+                        </ons-col>
+                    </ons-row>
+                </section>
+                <section style="padding: 10px">
+                    <ons-row style="height:120px" vatical-align="center">
+                        <ons-col style="background:#FFDEAD;">
+                            <p style="text-align: center;margin: 10px;">
+                                <ons-icon size="60px">
+                                    <i class="zmdi zmdi-audio"></i>
+                                </ons-icon>
+                            </p>
+                            <p style="text-align: center;margin: 10px;">MUSIC</p>
+                        </ons-col>
+                        <ons-col style="background:#FF66FF;">
+                            <p style="text-align: center;margin: 10px;">
+                                <ons-icon size="60px">
+                                    <i class="zmdi zmdi-google-drive"></i>
+                                </ons-icon>
+                            </p>
+                            <p style="text-align: center;margin: 10px;">Google Drive</p>
+                        </ons-col>
+                        <ons-col style="background:#00BFFF;">
+                            <p style="text-align: center;margin: 10px;">
+                                <ons-icon size="60px">
+                                    <i class="zmdi zmdi-google-maps"></i>
+                                </ons-icon>
+                            </p>
+                            <p style="text-align: center;margin: 10px;">Google Map</p>
+                        </ons-col>
+                    </ons-row>
+                </section>
+                </div>
+            </section>
             </div>
             <style type="text/css">
                 .recomended_playlist {
@@ -212,7 +242,7 @@
                     </div>
                     <div class="center">
                         <span class="list-item__title">Apple Watch Series3 GPS42mm Grey</span>
-                        <span class="list-item__subtitle">฿126,50.00</span>
+                        <span class="list-item__subtitle" style="color: blue">฿126,50.00</span>
                     </div>
                     <div class="right">
                         <ons-toolbar-button icon="md-delete"></ons-toolbar-button>
@@ -223,8 +253,8 @@
                         <img class="list-item__thumbnail" src="image/item2.jpg">
                     </div>
                     <div class="center">
-                        <span class="list-item__title">MICROLAB SPEAKER2.0</span>
-                        <span class="list-item__subtitle">฿1,570.00</span>
+                        <span class="list-item__title" >MICROLAB SPEAKER2.0</span>
+                        <span class="list-item__subtitle" style="color: blue">฿1,570.00</span>
                     </div>
                     <div class="right">
                         <ons-toolbar-button icon="md-delete"></ons-toolbar-button>
@@ -236,13 +266,17 @@
                     </div>
                     <div class="center">
                         <span class="list-item__title">Nike Air Max</span>
-                        <span class="list-item__subtitle">฿2,990.00</span>
+                        <span class="list-item__subtitle" style="color: blue">฿2,990.00</span>
                     </div>
                     <div class="right">
                         <ons-toolbar-button icon="md-delete"></ons-toolbar-button>
                     </div>
                 </ons-list-item>
+
             </ons-list>
+            <section style="padding: 8px">
+                <ons-button modifier="large">large</ons-button>
+            </section>
         </ons-page>
     </template>
 
