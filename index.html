@@ -296,7 +296,11 @@
         }
         
     });
-    function getHomeData(){}
+    function getHomeData(){
+        $.getJSON('home.json',function(data){
+            console.log(data);
+        });
+    }
     function getCartData(){}
 </script>
 
