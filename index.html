@@ -301,7 +301,12 @@
             console.log(data);
         });
     }
-    function getCartData(){}
+    function getCartData(){
+        $.getJSON('cart.json',function(data){
+            console.log(data);
+        });
+    }
+    
 </script>
 
 </html>
