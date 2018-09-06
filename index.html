@@ -286,11 +286,10 @@
 
 </body>
 <script>
-    document.addEventListener('prechange', function (event) {
+    document.addEventListener('prechange', function(event) {
         document.querySelector('ons-toolbar .center')
-            .innerHTML = event.tabItem.getAttribute('label');
+        .innerHTML = event.tabItem.getAttribute('label');
     });
-    document.querySelector('ons-row').setAttribute('someAttribute', 'true')
 </script>
 
 </html>
