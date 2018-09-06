@@ -287,9 +287,17 @@
 </body>
 <script>
     document.addEventListener('prechange', function(event) {
-        document.querySelector('ons-toolbar .center')
-        .innerHTML = event.tabItem.getAttribute('label');
+        if(event.index ==0){
+            console.log('Home clicked');//get data for home screen 
+            getHomeData();
+        }else if(event.index==1){
+            console.log('Cart clicked')
+            getCartData();
+        }
+        
     });
+    function getHomeData(){}
+    function getCartData(){}
 </script>
 
 </html>
