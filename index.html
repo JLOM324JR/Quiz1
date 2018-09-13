@@ -26,7 +26,7 @@
                 </ons-toolbar-button>
             </div>
 
-            <div class="center">Home</div>
+            <div class="center"id="appname">#</div>
 
             <div class="right">
                 <ons-toolbar-button>
@@ -55,13 +55,13 @@
             </section>
             <section style="padding: 10px">
                 <ons-carousel swipeable auto-scroll overscrollable id="carousel" style="height:300px;">
-                    <ons-carousel-item style="background : url('image/1.jpg') no-repeat center; background-size: contain;">
+                    <ons-carousel-item id="carousel1" style="background : url('image/1.jpg') no-repeat center; background-size: contain;">
                     </ons-carousel-item>
 
-                    <ons-carousel-item style="background : url('image/2.jpg') no-repeat center; background-size: contain;">
+                    <ons-carousel-item id="carousel2" style="background : url('image/2.jpg') no-repeat center; background-size: contain;">
                     </ons-carousel-item>
 
-                    <ons-carousel-item style="background : url('image/3.jpg') no-repeat center; background-size: contain;">
+                    <ons-carousel-item id="carousel3" style="background : url('image/3.jpg') no-repeat center; background-size: contain;">
                     </ons-carousel-item>
                 </ons-carousel>
             </section>
@@ -71,19 +71,15 @@
                         <ons-row style="height:120px" vatical-align="center">
                             <ons-col style="background:#FFFAF0;">
                                 <p style="text-align: center;margin: 10px;">
-                                    <ons-icon size="60px">
-                                        <i class="zmdi zmdi-facebook-box"></i>
-                                    </ons-icon>
+                                    <ons-icon size="60px" id = "icon1" icon = "md-face"></ons-icon>
                                 </p>
-                                <p style="text-align: center;margin: 10px;">Facebook</p>
+                                <p style="text-align: center;margin: 10px;" id="icon1_text">Beauty</p>
                             </ons-col>
                             <ons-col style="background:#FFCCFF;">
                                 <p style="text-align: center;margin: 10px;">
-                                    <ons-icon size="60px">
-                                        <i class="zmdi zmdi-github"></i>
-                                    </ons-icon>
+                                    <ons-icon size="60px" id = "icon2" icon = "md-bike"></ons-icon>
                                 </p>
-                                <p style="text-align: center;margin: 10px;">Github</p>
+                                <p style="text-align: center;margin: 10px;" id="icon2_text">Sports</p>
                             </ons-col>
                             <ons-col style="background:#BBFFFF;">
                                 <p style="text-align: center;margin: 10px;">
@@ -286,6 +282,7 @@
 
 </body>
 <script>
+    getHomeData();
     document.addEventListener('prechange', function(event) {
         if(event.index ==0){
             console.log('Home clicked');//get data for home screen 
@@ -299,6 +296,13 @@
     function getHomeData(){
         $.getJSON('home.json',function(data){
             console.log(data);
+            $('#appname').html(data.appname);
+            var style = "background: url('image/"+data.slides[0]+"')no-repeat center; background-size: contain;'";
+            $('#carousel1').attr('style',style)
+            $('#icon1').attr('icon',data.cartegories[0].icon);
+            $('#icon1_text').html(data.categories[0].name);
+            $('#icon2').attr('icon',data.cartegories[1].icon);
+            $('#icon2_text').html(data.categories[1].name);
         });
     }
     function getCartData(){
